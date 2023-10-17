@@ -1,4 +1,4 @@
-# Stable Diffusion WebUI Docker
+# Stable Diffusion WebUI Docker-dev
 
 Run Stable Diffusion on your machine with a nice UI without any hassle!
 
