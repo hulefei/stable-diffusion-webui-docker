@@ -31,7 +31,7 @@ services:
       - "${WEBUI_PORT:-5000}:5000"
       profiles: ["aigcion"]
       build: ./services/aigcion
-      image: sd-auto:01
+      image: aigcion:01
 
   auto: &automatic
     <<: *base_service

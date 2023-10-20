@@ -16,9 +16,9 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 #   git reset --hard 6ea190ae3ba939add6ae7b487e65d0090e16f6fe && \
   pip install -r requirements.txt
 
-# RUN --mount=type=cache,target=/root/.cache/pip  \
-#   --mount=type=bind,from=xformers,source=/wheel.whl,target=/xformers-0.0.21-cp310-cp310-linux_x86_64.whl \
-#   pip install /xformers-0.0.21-cp310-cp310-linux_x86_64.whl
+RUN --mount=type=cache,target=/root/.cache/pip  \
+  --mount=type=bind,from=xformers,source=/wheel.whl,target=/xformers-0.0.21-cp310-cp310-linux_x86_64.whl \
+  pip install /xformers-0.0.21-cp310-cp310-linux_x86_64.whl
 
 
 WORKDIR ${ROOT}
