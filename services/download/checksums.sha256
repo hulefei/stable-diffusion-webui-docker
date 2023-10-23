@@ -15,3 +15,5 @@ e6bb9ea85bbf7bf6478a7c6d18b71246f22e95d41bcdd80ed40aa212c33cfeff  /data/models/S
 6c8db511f910184436a613807ce06a729f4cf96bbf7977c7c6c40d5b3e4a8333  /data/models/vae_approx/xlvaeapp.pth
 eea1c57ad4d5e977ba54a4d26c489d28ef7ae0a204e8760ecc26062cc4a96b17  /data/models/vae_approx/xl-to-v1_interposer-v3.1.safetensors
 dd54cc90d95d2c72b97830e4b38f44a6521847284d5b9dbcfd16ba82779cdeb3  /data/models/prompt_expansion/fooocus_expansion/fooocus_expansion.bin
+dd3c01dbd7651a664e020e0b6c97e847f77eb092227db5b067daa107beeb7261  /data/models/loras/SDXL_Inkdrawing_v1.safetensors
+d1facd9a2b7c5e46d4d54de5a7441c370804c0c5727ca04a0708319d04047c58  /data/models/Stable-diffusion/anything-v3-fp16-pruned.safetensors
