@@ -6,6 +6,7 @@ x-base_service: &base_service
     volumes:
       - &v1 ./data:/data
       - &v2 ./output:/output
+      - &v3 ./output/fooocus:/Fooocus/outputs
     stop_signal: SIGKILL
     tty: true
     deploy:
@@ -35,11 +36,39 @@ services:
 
   auto: &automatic
     <<: *base_service
+    ports:
+      - "7860:7860"
     profiles: ["auto"]
     build: ./services/AUTOMATIC1111
     image: sd-auto:67
     environment:
       - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api
+
+  fooocus: &fooocus
+    <<: *base_service
+    volumes:
+      - *v1
+      - *v3
+    ports:
+      - "7861:7860"
+    stdin_open: true
+    tty: true
+    container_name: fooocus
+    profiles: ["fooocus"]
+    build: ./services/fooocus
+    image: sd-fooocus:1
+    environment:
+      - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api
+
+  comfy: &comfy
+    <<: *base_service
+    ports:
+      - "${WEBUI_PORT:-7862}:7860"
+    profiles: ["comfy"]
+    build: ./services/comfy/
+    image: sd-comfy:5
+    environment:
+      - CLI_ARGS=
 
   # auto-cpu:
   #   <<: *automatic
@@ -63,17 +92,6 @@ services:
   #   environment:
   #     - PRELOAD=true
   #     - CLI_ARGS=--always_use_cpu
-
-  comfy: &comfy
-    <<: *base_service
-    ports:
-      - "${WEBUI_PORT:-7861}:7860"
-    profiles: ["comfy"]
-    build: ./services/comfy/
-    image: sd-comfy:5
-    environment:
-      - CLI_ARGS=
-
 
   # comfy-cpu:
   #   <<: *comfy
