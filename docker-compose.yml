@@ -38,7 +38,7 @@ services:
     <<: *base_service
     ports:
       - "7860:7860"
-    profiles: ["auto"]
+    profiles: ["webui"]
     build: ./services/AUTOMATIC1111
     image: sd-auto:67
     environment:
@@ -54,7 +54,7 @@ services:
     stdin_open: true
     tty: true
     container_name: fooocus
-    profiles: ["fooocus"]
+    profiles: ["webui"]
     build: ./services/fooocus
     image: sd-fooocus:1
     environment:
@@ -64,7 +64,7 @@ services:
     <<: *base_service
     ports:
       - "${WEBUI_PORT:-7862}:7860"
-    profiles: ["comfy"]
+    profiles: ["webui"]
     build: ./services/comfy/
     image: sd-comfy:5
     environment:
