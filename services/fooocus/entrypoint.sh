@@ -4,6 +4,8 @@ echo Hello World
 
 # sd-webui 与 fooocus 的目录映射
 cp -vrfTs /data/models/Stable-diffusion/ "${ROOT}/models/checkpoints/"
+cp -vrfTs /data/models/clip_vision/ "${ROOT}/models/clip_vision/"
+cp -vrfTs /data/models/controlnet/ "${ROOT}/models/controlnet/"
 cp -vrfTs /data/models/Lora/ "${ROOT}/models/loras/"
 cp -vrfTs /data/models/inpaint/ "${ROOT}/models/inpaint/"
 cp -vrfTs /data/models/vae_approx/vaeapp_sd15.pt "${ROOT}/models/vae_approx/vaeapp_sd15.pth"
