@@ -17,3 +17,4 @@ eea1c57ad4d5e977ba54a4d26c489d28ef7ae0a204e8760ecc26062cc4a96b17  /data/models/v
 dd54cc90d95d2c72b97830e4b38f44a6521847284d5b9dbcfd16ba82779cdeb3  /data/models/prompt_expansion/fooocus_expansion/fooocus_expansion.bin
 dd3c01dbd7651a664e020e0b6c97e847f77eb092227db5b067daa107beeb7261  /data/models/loras/SDXL_Inkdrawing_v1.safetensors
 d1facd9a2b7c5e46d4d54de5a7441c370804c0c5727ca04a0708319d04047c58  /data/models/Stable-diffusion/anything-v3-fp16-pruned.safetensors
+ba2a82dec0151105cb593ba7254f58548ec6810aeb9e081c4533fb227d654476  /data/models/inpaint/inpaint.fooocus.patch

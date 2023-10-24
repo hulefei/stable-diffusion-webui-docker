@@ -38,3 +38,5 @@ https://huggingface.co/hulefei/civitai/resolve/main/loras/SDXL_Inkdrawing_v1.saf
   out=Lora/SDXL_Inkdrawing_v1.safetensors
 https://huggingface.co/hulefei/civitai/resolve/main/anything-v3-fp16-pruned.safetensors
   out=Stable-diffusion/anything-v3-fp16-pruned.safetensors
+https://huggingface.co/lllyasviel/fooocus_inpaint/resolve/main/inpaint.fooocus.patch
+  out=inpaint/inpaint.fooocus.patch
